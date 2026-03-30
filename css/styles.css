@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+}
+
+.scene {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    perspective: 1000px;
+}
+
+.lantern {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+}
+
+.lantern img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50px;
+    top: 50px;
+    border-radius: 10px;
+}
+
+/* 6 mặt */
+.lantern img:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
+.lantern img:nth-child(2) { transform: rotateY(60deg) translateZ(150px); }
+.lantern img:nth-child(3) { transform: rotateY(120deg) translateZ(150px); }
+.lantern img:nth-child(4) { transform: rotateY(180deg) translateZ(150px); }
+.lantern img:nth-child(5) { transform: rotateY(240deg) translateZ(150px); }
+.lantern img:nth-child(6) { transform: rotateY(300deg) translateZ(150px); }
+
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
